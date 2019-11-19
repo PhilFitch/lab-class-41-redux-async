@@ -1,4 +1,4 @@
-import getCharacters from '../services/lastAirbenderApi';
+import { getCharacters } from '../services/lastAirbenderApi';
 
 export const GET_CHARACTERS_LOADING = 'GET_CHARACTERS_LOADING';
 export const GET_CHARACTERS = 'GET_CHARACTERS';

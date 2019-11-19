@@ -28,6 +28,7 @@
     "promise-middleware-redux": "^1.2.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-redux": "^7.1.3",
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
