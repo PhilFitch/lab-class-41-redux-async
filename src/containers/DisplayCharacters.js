@@ -9,19 +9,16 @@ function DisplayCharacters({ characters, loading, fetchCharacters }) {
   useEffect(() => {
     fetchCharacters();
   }, []);
-
+  
   if(loading) return <h1>Loading...</h1>;
 
   return (
-    <Characters characters={characters} />
+    <Characters characters={characters[0]} />
   );
 }
 
 DisplayCharacters.propTypes = {
-  characters: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired, 
-    photoUrl: PropTypes.string.isRequired
-  })).isRequired,
+  characters: PropTypes.array.isRequired,
   loading: PropTypes.bool.isRequired,
   fetchCharacters: PropTypes.func.isRequired
 };

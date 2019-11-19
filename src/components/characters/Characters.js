@@ -5,8 +5,8 @@ import styles from './Characters.css';
 
 const Characters = ({ characters }) => {
   const characterElements = characters.map(character => (
-    <li key={character.photoUrl}>
-      <Character {...character} />
+    <li key={character.photoUrl || character.name}>
+      <Character character={character} />
     </li>
   ));
 
@@ -20,7 +20,7 @@ const Characters = ({ characters }) => {
 Characters.propTypes = {
   characters: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
-    photoUrl: PropTypes.string.isRequired,
+    photoUrl: PropTypes.string,
   })).isRequired
 };
 
